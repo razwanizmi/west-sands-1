@@ -4,8 +4,8 @@ import "./styles.scss";
 const Layout = ({ children }) => (
   <div>
     <Head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta charset="UTF-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title>West Sands at Ukulhas</title>
