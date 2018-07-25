@@ -1,0 +1,36 @@
+import "./hero.scss";
+
+class Hero extends React.Component {
+  state = {
+    loading: true
+  };
+
+  componentDidMount() {
+    this.setState(() => ({ loading: false }));
+  }
+
+  render() {
+    const { loading } = this.state;
+
+    return (
+      <section className={`section-hero${loading ? "--loading" : ""}`}>
+        <div className={`hero-overlay`}>
+          <div className="container--wide">
+            <div className="hero-text">
+              <h2>PARADISE FOUND</h2>
+              <p>
+                We discovered paradise on the island of Ukulhas! Fortunately, it
+                happened to be our backyard. Welcome to West Sands for a
+                distinctly different local island holiday experience in
+                Maldives. Soak up the sun, beach and the azure blue waters of
+                the Indian Ocean.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+}
+
+export default Hero;
