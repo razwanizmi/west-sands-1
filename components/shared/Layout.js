@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Navbar from "./Navbar"
 import "./layout.scss";
 
 const Layout = ({ children }) => (
@@ -32,6 +33,7 @@ const Layout = ({ children }) => (
       <meta name="twitter:image" content="" />
       <meta name="twitter:site" content="" />
     </Head>
+    <Navbar />
     {children}
   </div>
 );

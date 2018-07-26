@@ -3,11 +3,14 @@
 
 * {
   box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 body {
   background: #2e3842;
-  height: 1000vh;
 }
 
 body,
