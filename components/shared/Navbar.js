@@ -2,12 +2,13 @@ import "./navbar.scss";
 
 class Navbar extends React.Component {
   state = {
-    tint: false
+    hasTint: false,
+    showSideNav: false,
   };
 
   handleScroll = () => {
     this.setState(() => ({
-      tint: scrollY > innerHeight ? true : false
+      hasTint: scrollY > innerHeight ? true : false
     }));
   };
 
@@ -16,38 +17,48 @@ class Navbar extends React.Component {
   }
 
   render() {
-    const { tint } = this.state;
+    const { hasTint } = this.state;
 
     return (
-      <nav className={`nav ${tint ? "nav--tinted" : ""}`}>
-        <div className="nav-links">
-          <a href="/" className="nav-links__link">
-            <i className="fas fa-home" />
-          </a>
-          <a
-            href="/hotel"
-            className="nav-links__link nav-links__link--hoverable"
-          >
-            HOTEL
-          </a>
-          <a
-            href="/activities"
-            className="nav-links__link nav-links__link--hoverable"
-          >
-            ACTIVITIES
-          </a>
-        </div>
-        <div className="nav-links">
-          <a
-            href="http://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav-button"
-          >
-            BOOK NOW
-          </a>
-        </div>
-      </nav>
+      <>
+        <nav className={`nav ${hasTint ? "nav--tint" : ""}`}>
+          <div className="nav-links">
+            <a href="/" className="nav-links__link">
+              <i className="fas fa-home" />
+            </a>
+            <a
+              href="/hotel"
+              className="nav-links__link nav-links__link--hoverable"
+            >
+              HOTEL
+            </a>
+            <a
+              href="/activities"
+              className="nav-links__link nav-links__link--hoverable"
+            >
+              ACTIVITIES
+            </a>
+          </div>
+          <div className="nav-links">
+            <a
+              href="http://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-button"
+            >
+              BOOK NOW
+            </a>
+          </div>
+          <div className="nav-links nav-links--mobile">
+            <span className="nav-links__link">
+              <img
+                src="/static/images/hamburger.svg"
+                alt="Hamburger menu icon"
+              />
+            </span>
+          </div>
+        </nav>
+      </>
     );
   }
 }

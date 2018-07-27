@@ -11,7 +11,7 @@
   width: 100vw;
   z-index: 5;
 
-  &--tinted {
+  &--tint {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
@@ -37,6 +37,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  &--mobile {
+    display: none;
+  }
 
   &__link {
     border-bottom: solid 3px transparent;
@@ -68,5 +72,19 @@
   &:focus,
   &:active {
     background-color: #ef5e4a;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .nav-links {
+    display: none;
+
+    &--mobile {
+      display: flex;
+    }
   }
 }
