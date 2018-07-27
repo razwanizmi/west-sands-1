@@ -107,7 +107,7 @@ class Navbar extends React.Component {
               href="http://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-button"
+              className="nav-btn"
             >
               BOOK NOW
             </a>

@@ -18,8 +18,10 @@ class Hero extends React.Component {
         <div className={`hero-overlay`}>
           <div className="container--wide">
             <div className="hero-text">
-              <h2>PARADISE FOUND</h2>
-              <p>
+              <h2 className={`hero-text__h2${loading ? "--loading" : ""}`}>
+                PARADISE FOUND
+              </h2>
+              <p className={`hero-text__p${loading ? "--loading" : ""}`}>
                 We discovered paradise on the island of Ukulhas! Fortunately, it
                 happened to be our backyard. Welcome to West Sands for a
                 distinctly different local island holiday experience in
