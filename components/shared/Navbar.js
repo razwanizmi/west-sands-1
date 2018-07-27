@@ -1,9 +1,59 @@
 import "./navbar.scss";
 
+const SideNav = ({ show, onHide }) => (
+  <div className="side-nav">
+    <div
+      className={`side-nav__overlay ${show ? "side-nav__overlay--active" : ""}`}
+      onClick={onHide}
+    />
+    <div className={`side-nav__menu ${show ? "side-nav__menu--active" : ""}`}>
+      {show && (
+        <div className="side-menu">
+          <div className="side-menu__header">
+            <a href="javascript:void(0)" onClick={onHide}>
+              <img src="/static/images/cross.svg" alt="Close menu icon" />
+            </a>
+          </div>
+          <div className="side-menu__body">
+            <div className="menu-items">
+              <div className="menu-items__item">
+                <a href="#" className="menu-items__link" onClick={onHide}>
+                  HOME
+                </a>
+              </div>
+              <div className="menu-items__item">
+                <a href="#hotel" className="menu-items__link" onClick={onHide}>
+                  HOTEL
+                </a>
+              </div>
+              <div className="menu-items__item">
+                <a
+                  href="#activities"
+                  className="menu-items__link"
+                  onClick={onHide}
+                >
+                  ACTIVITIES
+                </a>
+              </div>
+            </div>
+            <a
+              href="https://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
+              rel="noopener noreferrer"
+              className="menu-items__btn"
+            >
+              BOOK NOW
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+);
+
 class Navbar extends React.Component {
   state = {
     hasTint: false,
-    showSideNav: false,
+    showSideNav: false
   };
 
   handleScroll = () => {
@@ -12,12 +62,25 @@ class Navbar extends React.Component {
     }));
   };
 
+  hideSideNav = () => {
+    this.setState(() => ({
+      showSideNav: false
+    }));
+  };
+
+  showSideNav = () => {
+    console.log("Show!");
+    this.setState(() => ({
+      showSideNav: true
+    }));
+  };
+
   componentDidMount() {
     addEventListener("scroll", this.handleScroll);
   }
 
   render() {
-    const { hasTint } = this.state;
+    const { hasTint, showSideNav } = this.state;
 
     return (
       <>
@@ -50,14 +113,16 @@ class Navbar extends React.Component {
             </a>
           </div>
           <div className="nav-links nav-links--mobile">
-            <span className="nav-links__link">
-              <img
-                src="/static/images/hamburger.svg"
-                alt="Hamburger menu icon"
-              />
-            </span>
+            <a
+              href="javascript:void(0)"
+              onClick={this.showSideNav}
+              className="nav-links__link"
+            >
+              <img src="/static/images/burger.svg" alt="Open menu icon" />
+            </a>
           </div>
         </nav>
+        <SideNav onHide={this.hideSideNav} show={showSideNav} />
       </>
     );
   }
