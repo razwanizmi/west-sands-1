@@ -19,6 +19,8 @@ const Layout = ({ children }) => (
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <link rel="stylesheet" href="static/css/bootstrap.min.css" />
       <link rel="stylesheet" href="static/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="static/css/slick/slick.css" />
+      <link rel="stylesheet" href="static/css/slick/slick-theme.css" />
       <meta property="fb:page_id" content="" />
       <meta property="og:title" content="West Sands at Ukulhas" />
       <meta property="og:image" content="https://razwanizmi.github.io/static/images/banner.png" />
