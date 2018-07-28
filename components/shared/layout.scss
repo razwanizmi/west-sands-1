@@ -34,9 +34,105 @@ textarea {
   line-height: 1.65em;
 }
 
+a {
+  -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  border-bottom: dotted 1px;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom-color: transparent;
+  text-decoration: none;
+}
+
+strong,
+b {
+  color: #fff;
+  font-weight: 600;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 2em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.225em;
+  line-height: 1em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.35em;
+  line-height: 1.75em;
+}
+
 .container--wide {
   margin: 0 auto;
   width: 84vw;
+}
+
+.container--right {
+  margin: 0 0 0 auto;
+  width: 92vw;
+}
+
+.titled-box {
+  display: flex;
+
+  &__title {
+    align-items: flex-end;
+    color: #c7ebe8;
+    display: flex;
+    flex: 1 0 8vw;
+    justify-content: center;
+    max-width: 8vw;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+
+    span {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-right: 1rem;
+    }
+
+    i {
+      margin-bottom: 1em;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__content {
+    flex: 1 0 92vw;
+    max-width: 92vw;
+  }
 }
 
 @media screen and (max-width: 1680px) {
@@ -64,5 +160,11 @@ textarea {
   textarea {
     font-size: 11pt;
     letter-spacing: 0.0375em;
+  }
+
+  .titled-box__title {
+    span {
+      margin-right: 0;
+    }
   }
 }
