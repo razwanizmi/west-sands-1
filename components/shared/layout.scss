@@ -35,17 +35,11 @@ textarea {
 }
 
 a {
-  -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  transition: color 0.2s ease, border-bottom-color 0.2s ease;
-  border-bottom: dotted 1px;
   color: inherit;
   text-decoration: none;
 }
 
 a:hover {
-  border-bottom-color: transparent;
   text-decoration: none;
 }
 
@@ -93,6 +87,11 @@ h2 {
   line-height: 1.75em;
 }
 
+h3 {
+  font-size: 1.15em;
+  line-height: 1.75em;
+}
+
 .container--wide {
   margin: 0 auto;
   width: 84vw;
@@ -111,7 +110,7 @@ h2 {
     color: #c7ebe8;
     display: flex;
     flex: 1 0 8vw;
-    justify-content: center;
+    justify-content: flex-end;
     max-width: 8vw;
     transform: rotate(180deg);
     writing-mode: vertical-lr;

@@ -69,7 +69,6 @@ class Navbar extends React.Component {
   };
 
   showSideNav = () => {
-    console.log("Show!");
     this.setState(() => ({
       showSideNav: true
     }));
