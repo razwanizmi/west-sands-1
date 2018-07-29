@@ -102,6 +102,10 @@ h3 {
   width: 92vw;
 }
 
+.mobile-only {
+  display: none
+}
+
 .titled-box {
   display: flex;
 
@@ -165,5 +169,13 @@ h3 {
     span {
       margin-right: 0;
     }
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  .large-only {
+    display: none;
   }
 }

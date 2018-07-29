@@ -9,56 +9,69 @@ const BestDeals = () => (
     <div className="titled-box">
       <div className="titled-box__title">
         <span>
-          <i class="fas fa-minus" /> PROMOTIONS
+          <i className="fas fa-minus" /> PROMOTIONS
         </span>
       </div>
       <div className="titled-box__content">
-        <Slider {...settings}>
-          <div className="deal-card">
-            <div className="deal-card__container">
-              <img src="static/images/promotion-1.jpg" className="w-100" />
-              <div className="deal-card__overlay">
-                <div>
-                  <h3>LAST MINUTE BLAST</h3>
-                  <p className="mb-0">Up to 40% off for last minute bookings</p>
+        <div className="large-only">
+          <Slider {...settings}>
+            {currentPromotions.map(promo => (
+              <div key={`deal-${promo.id}`} className="deal-card">
+                <div className="deal-card__container">
+                  <img src="static/images/promotion-1.jpg" className="w-100" />
+                  <div className="deal-card__overlay">
+                    <div>
+                      <h3>{promo.title}</h3>
+                      <p className="mb-0">{promo.line1}</p>
+                    </div>
+                    <p className="mb-0">{promo.line2}</p>
+                  </div>
                 </div>
-                <p className="mb-0">Valid from May to December</p>
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <div className="mobile-only">
+          {currentPromotions.map(promo => (
+            <div key={`deal-${promo.id}`} className="deal-card">
+              <div className="deal-card__container">
+                <img src="static/images/promotion-1.jpg" className="w-100" />
+                <div className="deal-card__overlay">
+                  <div>
+                    <h3>{promo.title}</h3>
+                    <p className="mb-0">{promo.line1}</p>
+                  </div>
+                  <p className="mb-0">{promo.line2}</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="deal-card">
-            <div className="deal-card__container">
-              <img src="static/images/promotion-1.jpg" className="w-100" />
-              <div className="deal-card__overlay">
-                <div>
-                  <h3>EARLY BIRD OFFER</h3>
-                  <p className="mb-0">
-                    For bookings made 60 days ahead of arrival
-                  </p>
-                </div>
-                <p className="mb-0">Up to 40% off from May to December</p>
-              </div>
-            </div>
-          </div>
-          <div className="deal-card">
-            <div className="deal-card__container">
-              <img src="static/images/promotion-1.jpg" className="w-100" />
-              <div className="deal-card__overlay">
-                <div>
-                  <h3>STAY 6, PAY 5</h3>
-                  <p className="mb-0">
-                    One free night for 6 nights and longer stays
-                  </p>
-                </div>
-                <p className="mb-0">Valid from April to December</p>
-              </div>
-            </div>
-          </div>
-        </Slider>
+          ))}
+        </div>
       </div>
     </div>
   </section>
 );
+
+const currentPromotions = [
+  {
+    id: 1,
+    title: "LAST MINUTE BLAST",
+    line1: "Up to 40% off for last minute bookings",
+    line2: "Valid from May to December"
+  },
+  {
+    id: 2,
+    title: "EARLY BIRD OFFER",
+    line1: "For bookings made 60 days ahead of arrival",
+    line2: "Up to 40% off from May to December"
+  },
+  {
+    id: 3,
+    title: "STAY 6, PAY 5",
+    line1: "One free night for 6 nights and longer stays",
+    line2: "Valid from April to December"
+  }
+];
 
 const settings = {
   slidesToShow: 2.3,

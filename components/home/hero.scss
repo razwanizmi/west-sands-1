@@ -1,15 +1,17 @@
 .hero-img {
-  background-attachment: fixed;
   background-image: url("/static/images/banner.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  left: 0;
   opacity: 1;
   position: fixed;
+  right: 0;
+  top: 0;
   transition: opacity 3s linear 2s;
   width: 100vw;
-  z-index: -1;
+  z-index: -2;
 
   &--loading {
     opacity: 0;
@@ -23,6 +25,7 @@
   position: fixed;
   top: 0;
   width: 100vw;
+  z-index: -1;
 }
 
 .hero-text {

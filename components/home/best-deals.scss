@@ -1,5 +1,5 @@
 .best-deals {
-  background-color: rgba(26, 153, 134, 0.9);
+  background-color: rgba(31, 193, 173, 0.8);
   padding: 8em 0 4em;
 }
 
@@ -29,20 +29,25 @@
 }
 
 @media screen and (max-width: 736px) {
-  .deal-card__overlay {
-    padding: 1em;
+  .deal-card {
+    padding: 0;
+    margin: 0 1em 1em 0;
 
-    * {
-      line-height: 1.5;
-      margin: 0;
-    }
+    &__overlay {
+      padding: 1em;
 
-    h3 {
-      font-size: 10pt;
-    }
+      * {
+        line-height: 1.5;
+        margin: 0;
+      }
 
-    p {
-      font-size: 9.5pt;
+      h3 {
+        font-size: 10pt;
+      }
+
+      p {
+        font-size: 9.5pt;
+      }
     }
   }
 }
