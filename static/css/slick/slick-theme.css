@@ -23,12 +23,12 @@
   line-height: 0;
 
   position: absolute;
-  top: calc(50% - 12.5px);
+  top: 50%;
 
   display: block;
 
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   padding: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
@@ -72,11 +72,11 @@
 }
 
 .slick-prev {
-  left: 3.5px;
+  left: 8.5px;
   z-index: 2;
 }
 [dir="rtl"] .slick-prev {
-  right: 38.5px;
+  right: 8.5px;
   left: auto;
 }
 .slick-prev:before {
@@ -87,11 +87,12 @@
 }
 
 .slick-next {
-  right: 38.5px;
+  right: 8.5px;
+  z-index: 2;
 }
 [dir="rtl"] .slick-next {
   right: auto;
-  left: 3.5px;
+  left: 8.5px;
 }
 .slick-next:before {
   content: "→";

@@ -9,7 +9,7 @@
   top: 0;
   transition: background-color 1s;
   width: 100vw;
-  z-index: 5;
+  z-index: 10;
 
   &--tint {
     background-color: rgba(0, 0, 0, 0.2);
