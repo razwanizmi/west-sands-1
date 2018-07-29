@@ -44,7 +44,9 @@ const Testimonials = () => (
         <Slider {...carouselSettings}>
           {testimonials.map(test => (
             <div key={`testimonial-${test.id}`} className="testimonial">
-              <blockquote className="testimonial__quote">{test.quote}</blockquote>
+              <blockquote className="testimonial__quote">
+                {test.quote}
+              </blockquote>
               <span className="testimonial__name">{test.name}</span>
             </div>
           ))}

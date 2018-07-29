@@ -78,6 +78,10 @@ class Navbar extends React.Component {
     addEventListener("scroll", this.handleScroll);
   }
 
+  componentWillUnmount() {
+    removeEventListener("scroll", this.handleScroll);
+  }
+
   render() {
     const { hasTint, showSideNav } = this.state;
 

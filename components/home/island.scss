@@ -1,0 +1,16 @@
+.island {
+  background-color: transparent;
+  padding: 8rem 0 4rem;
+}
+
+@media screen and (max-width: 980px) {
+  .island {
+    padding: 4rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .island {
+    padding: 3rem 0 1rem;
+  }
+}
