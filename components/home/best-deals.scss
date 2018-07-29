@@ -1,6 +1,6 @@
 .best-deals {
   background-color: rgba(31, 193, 173, 0.8);
-  padding: 7.3rem 0 3.7rem;
+  padding: 8rem 0 5.625rem;
 }
 
 .deal-card {
@@ -28,7 +28,17 @@
   }
 }
 
+@media screen and (max-width: 980px) {
+  .best-deals {
+    padding: 4rem 0 3.625rem;
+  }
+}
+
 @media screen and (max-width: 736px) {
+  .best-deals {
+    padding: 3rem 0 1rem;
+  }
+
   .deal-card {
     padding: 0;
     margin: 0 1rem 1rem 0;
