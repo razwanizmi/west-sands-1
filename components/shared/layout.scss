@@ -31,8 +31,8 @@ textarea {
   font-family: "Lato", "Open Sans", Helvetica, sans-serif;
   font-size: 12pt;
   font-weight: 400;
-  letter-spacing: 0.075em;
-  line-height: 1.65em;
+  letter-spacing: 0.075rem;
+  line-height: 1.65rem;
 }
 
 a {
@@ -56,7 +56,7 @@ i {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin: 0 0 2rem 0;
 }
 
 h1,
@@ -67,9 +67,9 @@ h5,
 h6 {
   color: #fff;
   font-weight: 800;
-  letter-spacing: 0.225em;
-  line-height: 1em;
-  margin: 0 0 1em 0;
+  letter-spacing: 0.225rem;
+  line-height: 1rem;
+  margin: 0 0 1rem 0;
   text-transform: uppercase;
 }
 
@@ -84,13 +84,13 @@ h6 a {
 }
 
 h2 {
-  font-size: 1.35em;
-  line-height: 1.75em;
+  font-size: 1.35rem;
+  line-height: 1.75rem;
 }
 
 h3 {
-  font-size: 1.15em;
-  line-height: 1.75em;
+  font-size: 1.15rem;
+  line-height: 1.75rem;
 }
 
 .container--wide {
@@ -124,11 +124,11 @@ h3 {
       align-items: center;
       display: flex;
       justify-content: center;
-      margin-right: 1em;
+      margin-right: 1rem;
     }
 
     i {
-      margin-bottom: 1em;
+      margin-bottom: 1rem;
       transform: rotate(90deg);
     }
   }
@@ -163,7 +163,7 @@ h3 {
   select,
   textarea {
     font-size: 11pt;
-    letter-spacing: 0.0375em;
+    letter-spacing: 0.0375rem;
   }
 
   .titled-box__title {
