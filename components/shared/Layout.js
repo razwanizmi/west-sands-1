@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Navbar from "./Navbar"
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 import "./layout.scss";
 
 const Layout = ({ children }) => (
@@ -37,6 +38,7 @@ const Layout = ({ children }) => (
     </Head>
     <Navbar />
     {children}
+    <Footer />
   </div>
 );
 

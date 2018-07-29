@@ -115,7 +115,7 @@ class Navbar extends React.Component {
             <a
               href="javascript:void(0)"
               onClick={this.showSideNav}
-              className="nav-links__link"
+              className="nav-links__link nav-links__link--burger"
             >
               <img src="/static/images/burger.svg" alt="Open menu icon" />
             </a>
