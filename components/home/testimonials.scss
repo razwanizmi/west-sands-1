@@ -1,0 +1,32 @@
+.testimonials {
+  background-color: #505393;
+  color: #d3d4e4;
+  padding: 8rem 0 5.625rem;
+}
+
+.testimonial {
+  padding-bottom: 1.5rem;
+  padding-right: 8vw;
+
+  &__quote {
+    border-left: solid 4px rgba(0, 0, 0, 0.125);
+    padding: 0.5rem 0 0.5rem 2rem;
+    font-style: italic;
+  }
+
+  &__name {
+    margin-left: calc(2rem + 4px);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .testimonials {
+    padding: 4rem 0 3.625rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .testimonials {
+    padding: 3rem 0 2.625rem;
+  }
+}
