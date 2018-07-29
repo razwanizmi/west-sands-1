@@ -1,12 +1,66 @@
 .transparent-footer {
   background-color: rgba(29, 36, 42, 0.9);
+  color: rgba(255, 255, 255, 0.5);
   display: flex;
-  padding: 6em 0 4em;
+  letter-spacing: 0.18rem;
+  line-height: 2;
+  padding: 6em 8vw 4em;
 
   &__column {
-    font-size: 0.8em;
+    font-size: 0.8rem;
     flex: 1;
-    padding: 18pt;
+    margin: 0 1rem 1rem 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--right {
+      font-size: 1.25rem;
+      text-align: right;
+
+      a {
+        margin-right: 1.25rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__header {
+    display: block;
+    font-weight: 600;
+    font-size: 0.96rem;
+    text-transform: uppercase;
   }
 }
 
+@media screen and (max-width: 980px) {
+  .transparent-footer {
+    flex-direction: column;
+    padding: 4em 0 2em;
+    text-align: center;
+
+    &__column {
+      margin-right: 0;
+
+      &--right {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .transparent-footer {
+    padding: 3rem 0 1rem;
+  }
+}
