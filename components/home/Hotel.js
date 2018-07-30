@@ -60,7 +60,6 @@ class Hotel extends React.Component {
 
   render() {
     const { animating, selectedTab } = this.state;
-    const room = rooms[selectedTab];
 
     return (
       <div className="hotel">
@@ -95,13 +94,16 @@ class Hotel extends React.Component {
                 </span>
               ))}
             </div>
-            <img
-              src={room.imageUrl}
-              alt={room.name}
-              className={`hotel__tabpanel ${
-                animating ? "hotel__tabpanel--animating" : ""
-              }`}
-            />
+            {rooms.map(room => (
+              <img
+                key={`roompanel-${room.id}`}
+                src={room.imageUrl}
+                alt={room.name}
+                className={`hotel__tabpanel ${
+                  room.id === selectedTab ? "hotel__tabpanel--active" : ""
+                } ${animating ? "hotel__tabpanel--animating" : ""}`}
+              />
+            ))}
           </div>
         </div>
       </div>
