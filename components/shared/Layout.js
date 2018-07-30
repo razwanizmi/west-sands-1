@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
       <link rel="stylesheet" href="static/css/slick/slick-theme.min.css" />
       <meta property="fb:page_id" content="" />
       <meta property="og:title" content="West Sands at Ukulhas" />
-      <meta property="og:image" content="https://razwanizmi.github.io/static/images/banner.png" />
+      <meta property="og:image" content="https://razwanizmi.github.io/static/images/meta.jpg" />
       <meta property="og:description" content="We discovered paradise on the island of Ukulhas! Fortunately, it happened to be our backyard. Welcome to West Sands for a distinctly different local island holiday experience in Maldives. Soak up the sun, beach and the azure blue waters of the Indian Ocean." />
       <meta property="og:url" content="https://razwanizmi.github.io" />
       <meta property="og:site_name" content="West Sands at Ukulhas" />
@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
       <meta name="twitter:url" content="https://razwanizmi.github.io" />
       <meta name="twitter:title" content="West Sands at Ukulhas" />
       <meta name="twitter:description" content="We discovered paradise on the island of Ukulhas! Fortunately, it happened to be our backyard. Welcome to West Sands for a distinctly different local island holiday experience in Maldives. Soak up the sun, beach and the azure blue waters of the Indian Ocean." />
-      <meta name="twitter:image" content="https://razwanizmi.github.io/static/images/banner.png" />
+      <meta name="twitter:image" content="https://razwanizmi.github.io/static/images/meta.jpg" />
       <meta name="twitter:site" content="https://razwanizmi.github.io" />
     </Head>
     <Navbar />
