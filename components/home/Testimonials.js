@@ -3,6 +3,12 @@ import "./testimonials.scss";
 
 const testimonials = [
   {
+    id: 0,
+    quote:
+      '"The hotel is situated very near to the tourist beach. The place is calm and clean with clear beach waters and reefs. The hotel is very clean and the staff is very friendly and welcoming. The equipment for snorkeling was also available by the hotel for free."',
+    name: "Raza, UK"
+  },
+  {
     id: 1,
     quote:
       '"The hotel is situated very near to the tourist beach. The place is calm and clean with clear beach waters and reefs. The hotel is very clean and the staff is very friendly and welcoming. The equipment for snorkeling was also available by the hotel for free."',
@@ -10,12 +16,6 @@ const testimonials = [
   },
   {
     id: 2,
-    quote:
-      '"The hotel is situated very near to the tourist beach. The place is calm and clean with clear beach waters and reefs. The hotel is very clean and the staff is very friendly and welcoming. The equipment for snorkeling was also available by the hotel for free."',
-    name: "Raza, UK"
-  },
-  {
-    id: 3,
     quote:
       '"The hotel is situated very near to the tourist beach. The place is calm and clean with clear beach waters and reefs. The hotel is very clean and the staff is very friendly and welcoming. The equipment for snorkeling was also available by the hotel for free."',
     name: "Raza, UK"

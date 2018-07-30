@@ -3,19 +3,19 @@ import "./best-deals.scss";
 
 const currentPromotions = [
   {
-    id: 1,
+    id: 0,
     title: "LAST MINUTE BLAST",
     line1: "Up to 40% off for last minute bookings",
     line2: "Valid from May to December"
   },
   {
-    id: 2,
+    id: 1,
     title: "EARLY BIRD OFFER",
     line1: "For bookings made 60 days ahead of arrival",
     line2: "Up to 40% off from May to December"
   },
   {
-    id: 3,
+    id: 2,
     title: "STAY 6, PAY 5",
     line1: "One free night for 6 nights and longer stays",
     line2: "Valid from April to December"
