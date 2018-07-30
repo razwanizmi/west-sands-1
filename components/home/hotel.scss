@@ -1,0 +1,66 @@
+.hotel {
+  background-color: #fff;
+  padding: 8rem 0 4rem;
+
+  * {
+    color: #2e3842;
+  }
+
+  &__description {
+    margin-bottom: 1rem;
+    margin-right: 8vw;
+  }
+
+  &__tablist {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  &__tab {
+    border-bottom: solid 3px #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18rem;
+    line-height: 2.5rem;
+    margin-right: 2.2rem;
+    transition: color 250ms, border-bottom-color 250ms;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: solid 3px #ccaf9f;
+      color: #ccaf9f;
+    }
+
+    &--active {
+      border-bottom: solid 3px #ccaf9f;
+      color: #ccaf9f;
+    }
+  }
+
+  &__tabpanel {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    display: none;
+    width: 100%;
+
+    &--active {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .hotel {
+    padding: 4rem 0 2rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .hotel {
+    padding: 3rem 0 1rem;
+  }
+}

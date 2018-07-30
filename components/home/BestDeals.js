@@ -56,7 +56,10 @@ const BestDeals = () => (
             {currentPromotions.map(promo => (
               <div key={`deal-${promo.id}`} className="deal-card">
                 <div className="deal-card__container">
-                  <img src="static/images/promotion-1.jpg" className="w-100" />
+                  <img
+                    src="static/images/promotion-1.jpg"
+                    className="deal-card__img"
+                  />
                   <div className="deal-card__overlay">
                     <div>
                       <h3>{promo.title}</h3>
