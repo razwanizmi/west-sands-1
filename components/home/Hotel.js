@@ -81,10 +81,10 @@ class Hotel extends React.Component {
                 advantage of the breeze and natural climate of Maldives.
               </p>
             </div>
-            <div className="hotel__tablist">
+            <div className="hotel__tab-list">
               {rooms.map(room => (
                 <span
-                  key={`roomtab-${room.id}`}
+                  key={`room-tab-${room.id}`}
                   className={`hotel__tab ${
                     selectedTab === room.id ? "hotel__tab--active" : ""
                   }`}
@@ -95,14 +95,22 @@ class Hotel extends React.Component {
               ))}
             </div>
             {rooms.map(room => (
-              <img
-                key={`roompanel-${room.id}`}
-                src={room.imageUrl}
-                alt={room.name}
-                className={`hotel__tabpanel ${
-                  room.id === selectedTab ? "hotel__tabpanel--active" : ""
-                } ${animating ? "hotel__tabpanel--animating" : ""}`}
-              />
+              <div
+                key={`room-panel-${room.id}`}
+                className={`hotel__tab-panel ${
+                  room.id === selectedTab ? "hotel__tab-panel--active" : ""
+                } ${animating ? "hotel__tab-panel--animating" : ""}`}
+              >
+                <img
+                  src={room.imageUrl}
+                  alt={room.name}
+                  className="hotel__tab-image"
+                />
+                <div className="hotel__tab-overlay">
+                  <h3>{room.name}</h3>
+                  <p>{room.description}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>

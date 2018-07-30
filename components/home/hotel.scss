@@ -11,10 +11,10 @@
     margin-right: 8vw;
   }
 
-  &__tablist {
+  &__tab-list {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   &__tab {
@@ -41,12 +41,10 @@
     }
   }
 
-  &__tabpanel {
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
+  &__tab-panel {
     display: none;
     opacity: 1;
-    width: 100%;
+    position: relative;
     transition: opacity 1s;
 
     &--active {
@@ -56,6 +54,37 @@
     &--animating {
       opacity: 0;
       transition: opacity 0ms;
+    }
+  }
+
+  &__tab-image {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    width: 100%;
+  }
+
+  &__tab-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 4rem 4rem;
+    height: 100%;
+    justify-content: flex-end;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+    h3 {
+      color: #fff;
+    }
+
+    p {
+      color: #fff;
+      margin-bottom: 0;
     }
   }
 }
@@ -69,5 +98,24 @@
 @media screen and (max-width: 736px) {
   .hotel {
     padding: 3rem 0 1rem;
+
+    &__tab-list {
+      flex-direction: column;
+    }
+
+    &__tab-overlay {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 10pt;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 9.5pt;
+        line-height: 1.5;
+      }
+    }
   }
 }
