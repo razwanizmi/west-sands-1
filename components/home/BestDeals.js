@@ -58,6 +58,7 @@ const BestDeals = () => (
                 <div className="deal-card__container">
                   <img
                     src="static/images/promotion-1.jpg"
+                    alt="Promotion hotel room"
                     className="deal-card__img"
                   />
                   <div className="deal-card__overlay">

@@ -103,7 +103,16 @@
       flex-direction: column;
     }
 
+    &__tab-panel {
+      margin-right: 1rem;
+    }
+
+    &__tab-image {
+      border-radius: 3px;
+    }
+
     &__tab-overlay {
+      border-radius: 3px;
       padding: 1.5rem;
 
       h3 {

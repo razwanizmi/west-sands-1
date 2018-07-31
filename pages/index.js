@@ -1,3 +1,4 @@
+import Activities from "../components/home/Activities";
 import BestDeals from "../components/home/BestDeals";
 import Hero from "../components/home/Hero";
 import Hotel from "../components/home/Hotel";
@@ -11,6 +12,7 @@ const Index = () => (
     <Hero />
     <BestDeals />
     <Hotel />
+    <Activities />
     <Island />
     <Testimonials />
   </Layout>
