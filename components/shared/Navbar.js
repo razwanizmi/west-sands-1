@@ -89,17 +89,17 @@ class Navbar extends React.Component {
       <>
         <nav className={`nav ${hasTint ? "nav--tint" : ""}`}>
           <div className="nav-links">
-            <a href="/" className="nav-links__link">
+            <a href="#" className="nav-links__link">
               <i className="fas fa-home" />
             </a>
             <a
-              href="/hotel"
+              href="#hotel"
               className="nav-links__link nav-links__link--hoverable"
             >
               HOTEL
             </a>
             <a
-              href="/activities"
+              href="#activities"
               className="nav-links__link nav-links__link--hoverable"
             >
               ACTIVITIES

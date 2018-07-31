@@ -41,7 +41,7 @@ const carouselSettings = {
 };
 
 const Activities = () => (
-  <section className="activities">
+  <section className="activities" id="activities">
     <div className="titled-box">
       <div className="titled-box__title">
         <span>

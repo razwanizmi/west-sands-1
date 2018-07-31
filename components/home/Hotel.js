@@ -62,7 +62,7 @@ class Hotel extends React.Component {
     const { animating, selectedTab } = this.state;
 
     return (
-      <div className="hotel">
+      <section className="hotel" id="hotel">
         <div className="container--right">
           <h2>SPACE . PRIVACY . COMFORT</h2>
         </div>
@@ -114,7 +114,7 @@ class Hotel extends React.Component {
             ))}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
