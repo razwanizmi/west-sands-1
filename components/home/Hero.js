@@ -15,7 +15,7 @@ class Hero extends React.Component {
     return (
       <section className="section-hero">
         <div className={`hero-img${loading ? "--loading" : ""}`} />
-        <div className={`hero-overlay`} />
+        <div className={`hero-overlay${loading ? "--loading" : ""}`} />
         <div className="container--wide">
           <div className="hero-text">
             <h2 className={`hero-text__h2${loading ? "--loading" : ""}`}>
