@@ -12,6 +12,11 @@ const Index = () => (
     <Hero />
     <BestDeals />
     <Hotel />
+    <div style={{ backgroundColor: "white" }}>
+      <div className="container--right">
+        <div style={{ height: "4px",	width: "80px",	backgroundColor: "#95ABBF" }} />
+      </div>
+    </div>
     <Activities />
     <Island />
     <Testimonials />

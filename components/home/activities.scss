@@ -1,6 +1,6 @@
 .activities {
   background-color: #fff;
-  padding: 2rem 0 5.625rem;
+  padding: 4rem 0 5.625rem;
 
   * {
     color: #2e3842;
@@ -19,7 +19,7 @@
   }
 
   &__overlay {
-    background-color: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(rgba(33,223,209,0) 52%, #1A9986 100%);
     display: flex;
     flex-direction: column;
     padding: 2rem 1.5rem;
@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 736px) {
   .activities {
-    padding: 1.5rem 0 1rem;
+    padding: 2rem 0 1rem;
   }
 
   .activity-card {
