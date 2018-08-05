@@ -63,9 +63,6 @@ class Hotel extends React.Component {
 
     return (
       <section className="hotel" id="hotel">
-        <div className="container--right">
-          <h2>SPACE . PRIVACY . COMFORT</h2>
-        </div>
         <div className="titled-box">
           <div className="titled-box__title">
             <span>
@@ -73,6 +70,7 @@ class Hotel extends React.Component {
             </span>
           </div>
           <div className="titled-box__content">
+            <h2>SPACE . PRIVACY . COMFORT</h2>
             <div className="hotel__description">
               <p>
                 Three things matter in our rooms. Space, privacy and comfort.

@@ -41,9 +41,6 @@ const carouselSettings = {
 
 const BestDeals = () => (
   <section className="best-deals">
-    <div className="container--right">
-      <h2>BEST DEALS</h2>
-    </div>
     <div className="titled-box">
       <div className="titled-box__title">
         <span>
@@ -51,6 +48,7 @@ const BestDeals = () => (
         </span>
       </div>
       <div className="titled-box__content">
+        <h2>BEST DEALS</h2>
         <div className="large-only">
           <Slider {...carouselSettings}>
             {currentPromotions.map(promo => (
