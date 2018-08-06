@@ -70,7 +70,7 @@ class Hotel extends React.Component {
             </span>
           </div>
           <div className="titled-box__content">
-            <h2>SPACE . PRIVACY . COMFORT</h2>
+            <h2>SPACE &bull; PRIVACY &bull; COMFORT</h2>
             <div className="hotel__description">
               <p>
                 Three things matter in our rooms. Space, privacy and comfort.
