@@ -1,3 +1,4 @@
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import "./navbar.scss";
 
 const SideNav = ({ show, onHide }) => (
@@ -17,23 +18,27 @@ const SideNav = ({ show, onHide }) => (
           <div className="side-menu__body">
             <div className="menu-items">
               <div className="menu-items__item">
-                <a href="#" className="menu-items__link" onClick={onHide}>
+                <AnchorLink href="#home" className="menu-items__link" onClick={onHide}>
                   HOME
-                </a>
+                </AnchorLink>
               </div>
               <div className="menu-items__item">
-                <a href="#hotel" className="menu-items__link" onClick={onHide}>
+                <AnchorLink
+                  href="#hotel"
+                  className="menu-items__link"
+                  onClick={onHide}
+                >
                   HOTEL
-                </a>
+                </AnchorLink>
               </div>
               <div className="menu-items__item">
-                <a
+                <AnchorLink
                   href="#activities"
                   className="menu-items__link"
                   onClick={onHide}
                 >
                   ACTIVITIES
-                </a>
+                </AnchorLink>
               </div>
             </div>
             <a
@@ -89,21 +94,21 @@ class Navbar extends React.Component {
       <>
         <nav className={`nav ${hasTint ? "nav--tint" : ""}`}>
           <div className="nav-links">
-            <a href="#" className="nav-links__link">
+            <AnchorLink href="#home" className="nav-links__link">
               <i className="fas fa-home" />
-            </a>
-            <a
+            </AnchorLink>
+            <AnchorLink
               href="#hotel"
               className="nav-links__link nav-links__link--hoverable"
             >
               HOTEL
-            </a>
-            <a
+            </AnchorLink>
+            <AnchorLink
               href="#activities"
               className="nav-links__link nav-links__link--hoverable"
             >
               ACTIVITIES
-            </a>
+            </AnchorLink>
           </div>
           <div className="nav-links">
             <a
