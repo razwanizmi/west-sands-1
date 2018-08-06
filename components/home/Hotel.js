@@ -79,37 +79,53 @@ class Hotel extends React.Component {
                 advantage of the breeze and natural climate of Maldives.
               </p>
             </div>
-            <div className="hotel__tab-list">
+            <div className="mobile-only">
               {rooms.map(room => (
-                <span
-                  key={`room-tab-${room.id}`}
-                  className={`hotel__tab ${
-                    selectedTab === room.id ? "hotel__tab--active" : ""
-                  }`}
-                  onClick={() => this.setTab(room.id)}
-                >
-                  {room.name}
-                </span>
+                <div className="hotel__tabless-container">
+                  <div
+                    className="hotel__tabless-image"
+                    style={{ backgroundImage: `url("${room.imageUrl}")` }}
+                  />
+                  <div className="hotel__tab-overlay">
+                    <h3>{room.name}</h3>
+                    <p>{room.description}</p>
+                  </div>
+                </div>
               ))}
             </div>
-            {rooms.map(room => (
-              <div
-                key={`room-panel-${room.id}`}
-                className={`hotel__tab-panel ${
-                  room.id === selectedTab ? "hotel__tab-panel--active" : ""
-                } ${animating ? "hotel__tab-panel--animating" : ""}`}
-              >
-                <img
-                  src={room.imageUrl}
-                  alt={room.name}
-                  className="hotel__tab-image"
-                />
-                <div className="hotel__tab-overlay">
-                  <h3>{room.name}</h3>
-                  <p>{room.description}</p>
-                </div>
+            <div className="large-only">
+              <div className="hotel__tab-list">
+                {rooms.map(room => (
+                  <span
+                    key={`room-tab-${room.id}`}
+                    className={`hotel__tab ${
+                      selectedTab === room.id ? "hotel__tab--active" : ""
+                    }`}
+                    onClick={() => this.setTab(room.id)}
+                  >
+                    {room.name}
+                  </span>
+                ))}
               </div>
-            ))}
+              {rooms.map(room => (
+                <div
+                  key={`room-panel-${room.id}`}
+                  className={`hotel__tab-panel ${
+                    room.id === selectedTab ? "hotel__tab-panel--active" : ""
+                  } ${animating ? "hotel__tab-panel--animating" : ""}`}
+                >
+                  <img
+                    src={room.imageUrl}
+                    alt={room.name}
+                    className="hotel__tab-image"
+                  />
+                  <div className="hotel__tab-overlay">
+                    <h3>{room.name}</h3>
+                    <p>{room.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

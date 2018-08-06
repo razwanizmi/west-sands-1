@@ -88,6 +88,32 @@
       margin-bottom: 0;
     }
   }
+
+  &__tabless-container {
+    margin-bottom: 1rem;
+    position: relative;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 144%;
+    }
+  }
+
+  &__tabless-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 0;
+    left: 0;
+    position:  absolute;
+    right: 0;
+    top: 0;
+  }
 }
 
 @media screen and (max-width: 980px) {
