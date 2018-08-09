@@ -27,17 +27,8 @@ const carouselSettings = {
   arrows: true,
   dots: true,
   infinite: false,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 1.3,
-        slidesToScroll: 1
-      }
-    }
-  ],
   slidesToScroll: 1,
-  slidesToShow: 2.3
+  slidesToShow: 3
 };
 
 const Activities = () => (

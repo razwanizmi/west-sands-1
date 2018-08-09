@@ -1,66 +1,40 @@
+import Slider from "react-slick";
 import "./hotel.scss";
 
 const rooms = [
   {
     id: 0,
-    name: "DELUXE",
+    name: "ROOMS",
     description:
       "Specially designed with the solo traveler in mind. The space and privacy you are looking for, delivered with all our amenities and luxuries, at an unbeatable price. Only limited units available.",
     imageUrl: "static/images/deluxe-room.jpg"
   },
   {
     id: 1,
-    name: "SEA VIEW SUITE",
+    name: "SUITES",
     description:
       "The rooms has a sliding door to the balcony inviting the breeze of the ocean all day long. Comes with paraquat flooring and fully air-conditioned. It gives an uninterrupted view of the beach and the ocean.",
     imageUrl: "static/images/sea-view-suite.jpg"
   },
   {
     id: 2,
-    name: "FAMILY SUITE",
+    name: "FAMILY SUITES & APARTMENTS",
     description:
       "26 square meters, made in to two interconnecting rooms. A door separates two rooms. Leave it open or closed, depending on how much privacy you need. A rare combination of space and privacy.",
     imageUrl: "static/images/family-suite.jpg"
-  },
-  {
-    id: 3,
-    name: "OCEAN VIEW SUITE",
-    description:
-      "Superior Rooms comes with an en-suite bathtub and features a king size bed (2×2 meters), giving you comfort, space and privacy in this room. Starting from 12 Square meters and comes with full modern specifications.",
-    imageUrl: "static/images/ocean-view-suite.jpg"
-  },
-  {
-    id: 4,
-    name: "GARDEN VIEW SUITE",
-    description:
-      "Comes with sleek interior and all modern amenities, and generously priced for a stay in Maldives. This room also features a private bathroom with pressure controlled rain-showers and parquet flooring.",
-    imageUrl: "static/images/garden-view-suite.jpg"
   }
 ];
 
+const carouselSettings = {
+  arrows: true,
+  dots: true,
+  infinite: false,
+  slidesToScroll: 1,
+  slidesToShow: 3
+};
+
 class Hotel extends React.Component {
-  state = {
-    animating: false,
-    selectedTab: 0
-  };
-
-  setTab = tabId => {
-    this.setState(
-      () => ({ animating: true, selectedTab: tabId }),
-      () =>
-        setTimeout(
-          () =>
-            this.setState(() => ({
-              animating: false
-            })),
-          50
-        )
-    );
-  };
-
   render() {
-    const { animating, selectedTab } = this.state;
-
     return (
       <section className="hotel" id="hotel">
         <div className="titled-box">
@@ -79,47 +53,35 @@ class Hotel extends React.Component {
                 advantage of the breeze and natural climate of Maldives.
               </p>
             </div>
+            <div className="large-only">
+              <Slider {...carouselSettings}>
+                {rooms.map(room => (
+                  <div key={`room-${room.id}`} className="hotel-card">
+                    <div className="hotel__tabless-container">
+                      <div
+                        className="hotel__tabless-image"
+                        style={{ backgroundImage: `url("${room.imageUrl}")` }}
+                      />
+                      <div className="hotel__tabless-overlay">
+                        <h3>{room.name}</h3>
+                        <p>{room.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
             <div className="mobile-only">
               {rooms.map(room => (
-                <div className="hotel__tabless-container">
+                <div
+                  key={`room-${room.id}`}
+                  className="hotel__tabless-container"
+                >
                   <div
                     className="hotel__tabless-image"
                     style={{ backgroundImage: `url("${room.imageUrl}")` }}
                   />
-                  <div className="hotel__tab-overlay">
-                    <h3>{room.name}</h3>
-                    <p>{room.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="large-only">
-              <div className="hotel__tab-list">
-                {rooms.map(room => (
-                  <span
-                    key={`room-tab-${room.id}`}
-                    className={`hotel__tab ${
-                      selectedTab === room.id ? "hotel__tab--active" : ""
-                    }`}
-                    onClick={() => this.setTab(room.id)}
-                  >
-                    {room.name}
-                  </span>
-                ))}
-              </div>
-              {rooms.map(room => (
-                <div
-                  key={`room-panel-${room.id}`}
-                  className={`hotel__tab-panel ${
-                    room.id === selectedTab ? "hotel__tab-panel--active" : ""
-                  } ${animating ? "hotel__tab-panel--animating" : ""}`}
-                >
-                  <img
-                    src={room.imageUrl}
-                    alt={room.name}
-                    className="hotel__tab-image"
-                  />
-                  <div className="hotel__tab-overlay">
+                  <div className="hotel__tabless-overlay">
                     <h3>{room.name}</h3>
                     <p>{room.description}</p>
                   </div>
