@@ -74,7 +74,7 @@
     background: linear-gradient(rgba(127, 110, 101, 0.2) 52%, #7f6e65 100%);
     display: flex;
     flex-direction: column;
-    padding: 0 1rem 4rem 4rem;
+    padding: 2rem 1.5rem;
     height: 100%;
     justify-content: flex-end;
     left: 0;
@@ -123,7 +123,7 @@
 
 @media screen and (max-width: 980px) {
   .hotel {
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 3.625rem;
   }
 }
 
@@ -136,7 +136,7 @@
     }
 
     &__tab-overlay {
-      padding: 1.5rem;
+      padding: 1rem;
 
       h3 {
         line-height: 1.25;

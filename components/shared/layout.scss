@@ -134,8 +134,8 @@ h3 {
   }
 
   &__content {
-    flex: 1 0 92vw;
-    max-width: 92vw;
+    flex: 1 0 84vw;
+    max-width: 84vw;
   }
 }
 
@@ -171,9 +171,16 @@ h3 {
     font-size: 1.125rem;
   }
 
-  .titled-box__title {
-    span {
-      margin-right: 0;
+  .titled-box {
+    &__title {
+      span {
+        margin-right: 0;
+      }
+    }
+
+    &__content {
+      flex: 1 0 92vw;
+      max-width: 92vw;
     }
   }
 
