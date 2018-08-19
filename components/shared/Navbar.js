@@ -50,8 +50,16 @@ const SideNav = ({ show, onHide }) => (
               target="_blank"
               rel="noopener noreferrer"
               className="menu-items__btn"
+              onClick={onHide}
             >
               BOOK NOW
+            </a>
+            <a
+              href="mailto:info@westsandsukulhas.com"
+              className="menu-items__btn"
+              onClick={onHide}
+            >
+              ENQUIRE
             </a>
           </div>
         </div>
@@ -127,6 +135,12 @@ class Navbar extends React.Component {
               className="nav-btn"
             >
               BOOK NOW
+            </a>
+            <a
+              href="mailto:info@westsandsukulhas.com"
+              className="nav-btn nav-btn--ghost"
+            >
+              ENQUIRE
             </a>
           </div>
           <div className="nav-links nav-links--mobile">

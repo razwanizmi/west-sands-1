@@ -74,7 +74,7 @@ class Hotel extends React.Component {
                           >
                             BOOK
                           </a>
-                          <a href="!#" className="hotel__info-btn">
+                          <a href="#!" className="hotel__info-btn">
                             DETAILS
                           </a>
                         </div>
@@ -106,7 +106,7 @@ class Hotel extends React.Component {
                       >
                         BOOK
                       </a>
-                      <a href="!#" className="hotel__info-btn">
+                      <a href="#!" className="hotel__info-btn">
                         DETAILS
                       </a>
                     </div>
