@@ -6,19 +6,22 @@ const currentPromotions = [
     id: 0,
     title: "LAST MINUTE BLAST",
     line1: "Up to 40% off for last minute bookings",
-    line2: "Valid from May to December"
+    line2: "Valid from May to December",
+    imageUrl: "static/images/last-minute.jpg"
   },
   {
     id: 1,
     title: "EARLY BIRD OFFER",
     line1: "For bookings made 60 days ahead of arrival",
-    line2: "Up to 40% off from May to December"
+    line2: "Up to 40% off from May to December",
+    imageUrl: "static/images/early-bird.jpg"
   },
   {
     id: 2,
     title: "STAY 6, PAY 5",
     line1: "One free night for 6 nights and longer stays",
-    line2: "Valid from April to December"
+    line2: "Valid from April to December",
+    imageUrl: "static/images/stay-5.jpg"
   }
 ];
 
@@ -45,11 +48,12 @@ const BestDeals = () => (
             {currentPromotions.map(promo => (
               <div key={`deal-${promo.id}`} className="deal-card">
                 <div className="deal-card__container">
-                  <img
-                    src="static/images/promotion-1.jpg"
-                    alt="Promotion hotel room"
-                    className="deal-card__img"
-                  />
+                  <div className="deal-card__figure">
+                    <div
+                      className="deal-card__img"
+                      style={{ backgroundImage: `url(${promo.imageUrl})` }}
+                    />
+                  </div>
                   <div className="deal-card__overlay">
                     <div>
                       <h3>{promo.title}</h3>
@@ -66,7 +70,12 @@ const BestDeals = () => (
           {currentPromotions.map(promo => (
             <div key={`deal-${promo.id}`} className="deal-card">
               <div className="deal-card__container">
-                <img src="static/images/promotion-1.jpg" className="w-100" />
+                <div className="deal-card__figure">
+                  <div
+                    className="deal-card__img"
+                    style={{ backgroundImage: `url(${promo.imageUrl})` }}
+                  />
+                </div>
                 <div className="deal-card__overlay">
                   <div>
                     <h3>{promo.title}</h3>

@@ -119,6 +119,44 @@
     right: 0;
     top: 0;
   }
+
+  &__btn-container {
+    margin-top: 1rem;
+  }
+
+  &__room-btn {
+    background-color: #1fc1ad;
+    border: 1pt solid #1fc1ad;
+    border-radius: 100px;
+    color: #fff;
+    display: inline;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 0.75rem;
+    padding: 0.1rem 1rem;
+
+    &:hover {
+      background-color: #ef5e4a;
+      border-color: #ef5e4a;
+      color: #fff;
+    }
+  }
+
+  &__info-btn {
+    background-color: transparent;
+    border: 1pt solid #1fc1ad;
+    border-radius: 100px;
+    color: #1fc1ad;
+    display: inline;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.1rem 1rem;
+
+    &:hover {
+      background-color: #1fc1ad;
+      color: #fff;
+    }
+  }
 }
 
 @media screen and (max-width: 980px) {

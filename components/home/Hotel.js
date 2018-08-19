@@ -6,22 +6,22 @@ const rooms = [
     id: 0,
     name: "ROOMS",
     description:
-      "Specially designed with the solo traveler in mind. The space and privacy you are looking for, delivered with all our amenities and luxuries, at an unbeatable price. Only limited units available.",
-    imageUrl: "static/images/deluxe-room.jpg"
+      "The space and privacy you are looking for, with all amenities and luxuries.",
+    imageUrl: "static/images/rooms.jpg"
   },
   {
     id: 1,
     name: "SUITES",
     description:
-      "The rooms has a sliding door to the balcony inviting the breeze of the ocean all day long. Comes with paraquat flooring and fully air-conditioned. It gives an uninterrupted view of the beach and the ocean.",
-    imageUrl: "static/images/sea-view-suite.jpg"
+      "The space and privacy you are looking for, with all amenities and luxuries.",
+    imageUrl: "static/images/suites.jpg"
   },
   {
     id: 2,
     name: "FAMILY SUITES & APARTMENTS",
     description:
-      "26 square meters, made in to two interconnecting rooms. A door separates two rooms. Leave it open or closed, depending on how much privacy you need. A rare combination of space and privacy.",
-    imageUrl: "static/images/family-suite.jpg"
+      "The space and privacy you are looking for, with all amenities and luxuries.",
+    imageUrl: "static/images/family-suites.jpg"
   }
 ];
 
@@ -65,6 +65,19 @@ class Hotel extends React.Component {
                       <div className="hotel__tabless-overlay">
                         <h3>{room.name}</h3>
                         <p>{room.description}</p>
+                        <div className="hotel__btn-container">
+                          <a
+                            href="https://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hotel__room-btn"
+                          >
+                            BOOK
+                          </a>
+                          <a href="!#" className="hotel__info-btn">
+                            DETAILS
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -84,6 +97,19 @@ class Hotel extends React.Component {
                   <div className="hotel__tabless-overlay">
                     <h3>{room.name}</h3>
                     <p>{room.description}</p>
+                    <div className="hotel__btn-container">
+                      <a
+                        href="https://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hotel__room-btn"
+                      >
+                        BOOK
+                      </a>
+                      <a href="!#" className="hotel__info-btn">
+                        DETAILS
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}

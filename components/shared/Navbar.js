@@ -18,7 +18,11 @@ const SideNav = ({ show, onHide }) => (
           <div className="side-menu__body">
             <div className="menu-items">
               <div className="menu-items__item">
-                <AnchorLink href="#home" className="menu-items__link" onClick={onHide}>
+                <AnchorLink
+                  href="#home"
+                  className="menu-items__link"
+                  onClick={onHide}
+                >
                   HOME
                 </AnchorLink>
               </div>
@@ -43,6 +47,7 @@ const SideNav = ({ show, onHide }) => (
             </div>
             <a
               href="https://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
+              target="_blank"
               rel="noopener noreferrer"
               className="menu-items__btn"
             >
@@ -112,7 +117,7 @@ class Navbar extends React.Component {
           </div>
           <div className="nav-links">
             <a
-              href="http://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
+              href="https://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
               target="_blank"
               rel="noopener noreferrer"
               className="nav-btn"
