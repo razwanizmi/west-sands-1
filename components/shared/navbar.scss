@@ -121,7 +121,7 @@
 
   &__header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: calc((3.2rem - 16px) / 4) 1rem;
     width: 100%;
   }
@@ -185,7 +185,7 @@
 
 @media screen and (max-width: 736px) {
   .nav {
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   .nav-links {

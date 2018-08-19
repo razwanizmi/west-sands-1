@@ -11,11 +11,6 @@ const SideNav = ({ show, onHide }) => (
       {show && (
         <div className="side-menu">
           <div className="side-menu__header">
-            <img
-              src="static/images/logo.png"
-              alt="West Sands logo"
-              className="nav-logo"
-            />
             <a href="javascript:void(0)" onClick={onHide}>
               <img src="/static/images/cross.svg" alt="Close menu icon" />
             </a>
@@ -133,6 +128,15 @@ class Navbar extends React.Component {
             >
               BOOK NOW
             </a>
+          </div>
+          <div className="nav-links nav-links--mobile">
+            <div className="nav-links__link nav-links__link--burger">
+              <img
+                src="static/images/logo.png"
+                alt="West Sands logo"
+                className="nav-logo"
+              />
+            </div>
           </div>
           <div className="nav-links nav-links--mobile">
             <a
