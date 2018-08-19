@@ -43,6 +43,11 @@
   }
 }
 
+.footer-logo {
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 980px) {
   .transparent-footer {
     flex-direction: column;

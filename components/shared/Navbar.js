@@ -11,6 +11,11 @@ const SideNav = ({ show, onHide }) => (
       {show && (
         <div className="side-menu">
           <div className="side-menu__header">
+            <img
+              src="static/images/logo.png"
+              alt="West Sands logo"
+              className="nav-logo"
+            />
             <a href="javascript:void(0)" onClick={onHide}>
               <img src="/static/images/cross.svg" alt="Close menu icon" />
             </a>
@@ -100,7 +105,11 @@ class Navbar extends React.Component {
         <nav className={`nav ${hasTint ? "nav--tint" : ""}`}>
           <div className="nav-links">
             <AnchorLink href="#home" className="nav-links__link">
-              <i className="fas fa-home" />
+              <img
+                src="static/images/logo.png"
+                alt="West Sands logo"
+                className="nav-logo"
+              />
             </AnchorLink>
             <AnchorLink
               href="#hotel"
