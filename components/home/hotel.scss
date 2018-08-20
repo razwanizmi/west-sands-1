@@ -147,12 +147,12 @@
     background-color: transparent;
     border: 1pt solid #1fc1ad;
     border-radius: 100px;
-    color: #1fc1ad;
+    color: #fff;
     display: inline;
     font-size: 0.7rem;
     font-weight: 600;
     padding: 0.1rem 1rem;
-    transition: background-color 250ms, color 250ms;
+    transition: background-color 250ms;
 
     &:hover {
       background-color: #1fc1ad;
