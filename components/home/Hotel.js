@@ -6,21 +6,20 @@ const rooms = [
     id: 0,
     name: "ROOMS",
     description:
-      "The space and privacy you are looking for, with all amenities and luxuries.",
+      "Oversized standard rooms that feature all amenities you need.",
     imageUrl: "static/images/rooms.jpg"
   },
   {
     id: 1,
     name: "SUITES",
     description:
-      "The space and privacy you are looking for, with all amenities and luxuries.",
+      "Extra space, extra windows, sleek decor and all for a tad bit extra.",
     imageUrl: "static/images/suites.jpg"
   },
   {
     id: 2,
     name: "FAMILY SUITES & APARTMENTS",
-    description:
-      "The space and privacy you are looking for, with all amenities and luxuries.",
+    description: "Large rooms connected within, for our big familes.",
     imageUrl: "static/images/family-suites.jpg"
   }
 ];

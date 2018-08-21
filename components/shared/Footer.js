@@ -9,12 +9,10 @@ const Footer = () => (
         className="footer-logo"
       />
       <address className="mb-0">
-        <span className="transparent-footer__header">
-          West Sands at Ukulhas
-        </span>
-        Vashamagu, Ukulhas 09030
+        <span className="transparent-footer__header">West Sands Ukulhas</span>
+        Maldives
         <br />
-        North Ari Atoll, Maldives.
+        Ukulhas 09030, North Ari Atoll
       </address>
     </div>
     <div className="transparent-footer__column">
@@ -25,14 +23,33 @@ const Footer = () => (
       <i className="far fa-envelope" /> info@westsandsukulhas.com
     </div>
     <div className="transparent-footer__column transparent-footer__column--right">
-      <a href="#facebook">
+      <a
+        href="https://www.facebook.com/Westsandsukulhas/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="fab fa-facebook-f" />
       </a>
-      <a href="#twitter">
+      <a
+        href="https://twitter.com/westsandsmv"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="fab fa-twitter" />
       </a>
-      <a href="#instagram">
+      <a
+        href="https://www.instagram.com/westsandsukulhas/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="fab fa-instagram" />
+      </a>
+      <a
+        href="https://www.tripadvisor.com/Hotel_Review-g3823213-d12097640-Reviews-West_Sands-Ukulhas.html"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fab fa-tripadvisor" />
       </a>
     </div>
   </footer>
