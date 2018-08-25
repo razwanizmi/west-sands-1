@@ -9,8 +9,14 @@ const Island = () => (
         </span>
       </div>
       <div className="titled-box__content">
-        <h2>ISLAND COMING SOON</h2>
-        <p>We are building the island section. Stay tuned.</p>
+        <h2>WELCOME TO UKULHAS</h2>
+        <p>
+          Located in North Ari Atoll, Ukulhas is a tiny 57 acre island. It
+          offers unparalled beauty as an island - with one of the most beautiful
+          beaches in the area, combined with thick natural vegetations.
+          Surrounding it is one of the most spectacular diving and marine life
+          sites in Maldives.
+        </p>
       </div>
     </div>
   </section>

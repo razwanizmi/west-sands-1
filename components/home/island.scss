@@ -1,6 +1,9 @@
 .island {
-  background-image: url("/static/images/banner.png");
-  background-attachment: fixed;
+  background-image: linear-gradient(
+      rgba(29, 36, 42, 0.5),
+      rgba(29, 36, 42, 0.5)
+    ),
+    url("/static/images/island.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
