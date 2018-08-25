@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Slider from "react-slick";
 import "./hotel.scss";
 
@@ -73,9 +74,9 @@ class Hotel extends React.Component {
                           >
                             BOOK
                           </a>
-                          <a href="#!" className="hotel__info-btn">
-                            DETAILS
-                          </a>
+                          <Link href="/rooms">
+                            <a className="hotel__info-btn">DETAILS</a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -105,9 +106,9 @@ class Hotel extends React.Component {
                       >
                         BOOK
                       </a>
-                      <a href="#!" className="hotel__info-btn">
-                        DETAILS
-                      </a>
+                      <Link href="/rooms">
+                        <a className="hotel__info-btn">DETAILS</a>
+                      </Link>
                     </div>
                   </div>
                 </div>
