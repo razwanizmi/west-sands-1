@@ -8,7 +8,7 @@ const UnderConstruction = () => (
         <Link href="/">
           <a>
             <img
-              src="static/images/logo-header.svg"
+              src="../static/images/logo-header.svg"
               alt="West Sands logo"
               class="construction__logo"
             />
