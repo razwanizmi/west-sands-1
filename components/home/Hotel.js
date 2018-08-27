@@ -8,20 +8,20 @@ const rooms = [
     name: "ROOMS",
     description:
       "Oversized standard rooms that feature all amenities you need.",
-    imageUrl: "static/images/rooms.jpg"
+    imageUrl: "/static/images/rooms.jpg"
   },
   {
     id: 1,
     name: "SUITES",
     description:
       "Extra space, extra windows, sleek decor and all for a tad bit extra.",
-    imageUrl: "static/images/suites.jpg"
+    imageUrl: "/static/images/suites.jpg"
   },
   {
     id: 2,
     name: "FAMILY SUITES & APARTMENTS",
     description: "Large rooms connected within, for our big familes.",
-    imageUrl: "static/images/family-suites.jpg"
+    imageUrl: "/static/images/family-suites.jpg"
   }
 ];
 

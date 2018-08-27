@@ -109,7 +109,7 @@ class Navbar extends React.Component {
           <div className="nav-links">
             <AnchorLink href="#home" className="nav-links__link">
               <img
-                src="static/images/logo-header.svg"
+                src="/static/images/logo-header.svg"
                 alt="West Sands logo"
                 className="nav-logo"
               />

@@ -4,7 +4,7 @@ const Footer = () => (
   <footer className="transparent-footer">
     <div className="transparent-footer__column">
       <img
-        src="static/images/logo-footer.svg"
+        src="/static/images/logo-footer.svg"
         alt="West Sands logo"
         className="footer-logo"
       />

@@ -7,19 +7,19 @@ const currentActivities = [
     title: "BUCKET LIST BUSTER",
     description:
       "Experience the undersea world of the magical and the magnificent.",
-    imageUrl: "static/images/activity-bucket-list-buster.jpg"
+    imageUrl: "/static/images/activity-bucket-list-buster.jpg"
   },
   {
     id: 1,
     title: "SUN, SEA & SAND",
     description: "Good times and tan lines: the recipe for a perfect holiday.",
-    imageUrl: "static/images/activity-sun-sea-sand.jpg"
+    imageUrl: "/static/images/activity-sun-sea-sand.jpg"
   },
   {
     id: 2,
     title: "THE TROPICAL ADVENTURER",
     description: "Expolore and discover the best of this side of paradise.",
-    imageUrl: "static/images/activity-tropical-adventurer.jpg"
+    imageUrl: "/static/images/activity-tropical-adventurer.jpg"
   }
 ];
 

@@ -19,10 +19,10 @@ const Layout = ({ children }) => (
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <link rel="stylesheet" href="static/css/bootstrap.min.css" />
-      <link rel="stylesheet" href="static/css/fontawesome.min.css" />
-      <link rel="stylesheet" href="static/css/slick/slick.min.css" />
-      <link rel="stylesheet" href="static/css/slick/slick-theme.min.css" />
+      <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="/static/css/fontawesome.min.css" />
+      <link rel="stylesheet" href="/static/css/slick/slick.min.css" />
+      <link rel="stylesheet" href="/static/css/slick/slick-theme.min.css" />
       <meta property="fb:page_id" content="" />
       <meta property="og:title" content="West Sands at Ukulhas" />
       <meta

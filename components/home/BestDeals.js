@@ -7,21 +7,21 @@ const currentPromotions = [
     title: "LAST MINUTE BLAST",
     line1: "Up to 40% off for last minute bookings",
     line2: "Valid from May to December",
-    imageUrl: "static/images/last-minute.jpg"
+    imageUrl: "/static/images/last-minute.jpg"
   },
   {
     id: 1,
     title: "EARLY BIRD OFFER",
     line1: "For bookings made 60 days ahead of arrival",
     line2: "Up to 40% off from May to December",
-    imageUrl: "static/images/early-bird.jpg"
+    imageUrl: "/static/images/early-bird.jpg"
   },
   {
     id: 2,
     title: "STAY 6, PAY 5",
     line1: "One free night for 6 nights and longer stays",
     line2: "Valid from April to December",
-    imageUrl: "static/images/stay-5.jpg"
+    imageUrl: "/static/images/stay-5.jpg"
   }
 ];
 
