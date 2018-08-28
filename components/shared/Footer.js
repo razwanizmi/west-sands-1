@@ -49,7 +49,7 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fab fa-tripadvisor" />
+        <i className="fab fa-tripadvisor" />
       </a>
     </div>
   </footer>

@@ -1,7 +1,9 @@
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Link from "next/link";
+import PropTypes from "prop-types";
 import "./navbar.scss";
 
-const SideNav = ({ show, onHide }) => (
+const SideNav = ({ minimal, onHide, show }) => (
   <div className="side-nav">
     <div
       className={`side-nav__overlay ${show ? "side-nav__overlay--active" : ""}`}
@@ -18,32 +20,44 @@ const SideNav = ({ show, onHide }) => (
           <div className="side-menu__body">
             <div className="menu-items">
               <div className="menu-items__item">
-                <AnchorLink
-                  href="#home"
-                  className="menu-items__link"
-                  onClick={onHide}
-                >
-                  HOME
-                </AnchorLink>
+                {minimal ? (
+                  <Link href="/">
+                    <a className="menu-items__link" onClick={onHide}>
+                      HOME
+                    </a>
+                  </Link>
+                ) : (
+                  <AnchorLink
+                    href="#home"
+                    className="menu-items__link"
+                    onClick={onHide}
+                  >
+                    HOME
+                  </AnchorLink>
+                )}
               </div>
-              <div className="menu-items__item">
-                <AnchorLink
-                  href="#hotel"
-                  className="menu-items__link"
-                  onClick={onHide}
-                >
-                  HOTEL
-                </AnchorLink>
-              </div>
-              <div className="menu-items__item">
-                <AnchorLink
-                  href="#activities"
-                  className="menu-items__link"
-                  onClick={onHide}
-                >
-                  ACTIVITIES
-                </AnchorLink>
-              </div>
+              {!minimal && (
+                <>
+                  <div className="menu-items__item">
+                    <AnchorLink
+                      href="#hotel"
+                      className="menu-items__link"
+                      onClick={onHide}
+                    >
+                      HOTEL
+                    </AnchorLink>
+                  </div>
+                  <div className="menu-items__item">
+                    <AnchorLink
+                      href="#activities"
+                      className="menu-items__link"
+                      onClick={onHide}
+                    >
+                      ACTIVITIES
+                    </AnchorLink>
+                  </div>
+                </>
+              )}
             </div>
             <a
               href="https://app.axisrooms.com/beV2/home1.html?bookingEngineId=2444"
@@ -67,6 +81,11 @@ const SideNav = ({ show, onHide }) => (
     </div>
   </div>
 );
+SideNav.propTypes = {
+  minimal: PropTypes.bool,
+  onHide: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired
+};
 
 class Navbar extends React.Component {
   state = {
@@ -102,30 +121,47 @@ class Navbar extends React.Component {
 
   render() {
     const { hasTint, showSideNav } = this.state;
+    const { minimal } = this.props;
 
     return (
       <>
         <nav className={`nav ${hasTint ? "nav--tint" : ""}`}>
           <div className="nav-links">
-            <AnchorLink href="#home" className="nav-links__link">
-              <img
-                src="/static/images/logo-header.svg"
-                alt="West Sands logo"
-                className="nav-logo"
-              />
-            </AnchorLink>
-            <AnchorLink
-              href="#hotel"
-              className="nav-links__link nav-links__link--hoverable"
-            >
-              HOTEL
-            </AnchorLink>
-            <AnchorLink
-              href="#activities"
-              className="nav-links__link nav-links__link--hoverable"
-            >
-              ACTIVITIES
-            </AnchorLink>
+            {minimal ? (
+              <Link href="/">
+                <a className="nav-links__link">
+                  <img
+                    src="/static/images/logo-header.svg"
+                    alt="West Sands logo"
+                    className="nav-logo"
+                  />
+                </a>
+              </Link>
+            ) : (
+              <AnchorLink href="#home" className="nav-links__link">
+                <img
+                  src="/static/images/logo-header.svg"
+                  alt="West Sands logo"
+                  className="nav-logo"
+                />
+              </AnchorLink>
+            )}
+            {!minimal && (
+              <>
+                <AnchorLink
+                  href="#hotel"
+                  className="nav-links__link nav-links__link--hoverable"
+                >
+                  HOTEL
+                </AnchorLink>
+                <AnchorLink
+                  href="#activities"
+                  className="nav-links__link nav-links__link--hoverable"
+                >
+                  ACTIVITIES
+                </AnchorLink>
+              </>
+            )}
           </div>
           <div className="nav-links">
             <a
@@ -162,10 +198,17 @@ class Navbar extends React.Component {
             </a>
           </div>
         </nav>
-        <SideNav onHide={this.hideSideNav} show={showSideNav} />
+        <SideNav
+          minimal={minimal}
+          onHide={this.hideSideNav}
+          show={showSideNav}
+        />
       </>
     );
   }
 }
+Navbar.propTypes = {
+  minimal: PropTypes.bool
+};
 
 export default Navbar;
