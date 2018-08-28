@@ -6,6 +6,7 @@ import Hotel from "../components/home/Hotel";
 import Island from "../components/home/Island";
 import Layout from "../components/shared/Layout";
 import Navbar from "../components/shared/Navbar";
+import Separator from "../components/shared/Separator";
 import Testimonials from "../components/home/Testimonials";
 
 const Index = () => (
@@ -14,13 +15,7 @@ const Index = () => (
     <Hero />
     <BestDeals />
     <Hotel />
-    <div style={{ backgroundColor: "white" }}>
-      <div className="container--right">
-        <div
-          style={{ height: "4px", width: "80px", backgroundColor: "#95ABBF" }}
-        />
-      </div>
-    </div>
+    <Separator />
     <Activities />
     <Island />
     <Testimonials />
