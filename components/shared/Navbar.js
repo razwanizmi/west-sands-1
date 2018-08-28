@@ -90,6 +90,7 @@ SideNav.propTypes = {
 class Navbar extends React.Component {
   state = {
     hasTint: false,
+    showNotification: true,
     showSideNav: false
   };
 
@@ -111,6 +112,12 @@ class Navbar extends React.Component {
     }));
   };
 
+  hideNotification = () => {
+    this.setState(() => ({
+      showNotification: false
+    }));
+  };
+
   componentDidMount() {
     addEventListener("scroll", this.handleScroll);
   }
@@ -120,7 +127,7 @@ class Navbar extends React.Component {
   }
 
   render() {
-    const { hasTint, showSideNav } = this.state;
+    const { hasTint, showNotification, showSideNav } = this.state;
     const { minimal } = this.props;
 
     return (
@@ -198,6 +205,31 @@ class Navbar extends React.Component {
             </a>
           </div>
         </nav>
+        {!minimal && (
+          <div
+            className={`nav-flash ${
+              showNotification ? "" : "nav-flash--hidden"
+            }`}
+          >
+            <div className="nav-flash__close" onClick={this.hideNotification}>
+              &times;
+            </div>
+            <div className="nav-flash__container">
+              <p>
+                This site is still a work in progress, but we can't wait to
+                share it with you. Please bear with us as we continue to make
+                updates, and feel free to leave any feedback at{" "}
+                <a
+                  href="mailto:info@westsandsukulhas.com"
+                  className="nav-flash__link"
+                >
+                  info@westsandsukulhas.com
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+        )}
         <SideNav
           minimal={minimal}
           onHide={this.hideSideNav}
