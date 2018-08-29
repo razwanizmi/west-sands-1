@@ -201,12 +201,13 @@
   left: 0;
   position: fixed;
   opacity: 0.9;
-  transition: opacity 500ms;
+  transition: opacity 500ms, z-index 500ms;
   width: 100vw;
   z-index: 10;
 
   &--hidden {
     opacity: 0;
+    z-index: -1;
   }
 
   &__close {

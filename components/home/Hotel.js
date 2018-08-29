@@ -48,8 +48,8 @@ class Hotel extends React.Component {
             <div className="hotel__description">
               <p>
                 Three things matter in our rooms. Space, privacy and comfort.
-                Our rooms, the largest in Ukulhas are carefully designed to
-                ensure modern, linear and chic architecture while taking
+                Our rooms, among the largest in Ukulhas are carefully designed
+                to ensure modern, linear and chic architecture while taking
                 advantage of the breeze and natural climate of Maldives.
               </p>
             </div>

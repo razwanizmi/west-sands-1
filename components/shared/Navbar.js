@@ -187,13 +187,28 @@ class Navbar extends React.Component {
             </a>
           </div>
           <div className="nav-links nav-links--mobile">
-            <div className="nav-links__link nav-links__link--burger">
-              <img
-                src="static/images/logo-header.svg"
-                alt="West Sands logo"
-                className="nav-logo"
-              />
-            </div>
+            {minimal ? (
+              <Link href="/">
+                <a className="nav-links__link nav-links__link--burger">
+                  <img
+                    src="/static/images/logo-header.svg"
+                    alt="West Sands logo"
+                    className="nav-logo"
+                  />
+                </a>
+              </Link>
+            ) : (
+              <AnchorLink
+                href="#home"
+                className="nav-links__link nav-links__link--burger"
+              >
+                <img
+                  src="/static/images/logo-header.svg"
+                  alt="West Sands logo"
+                  className="nav-logo"
+                />
+              </AnchorLink>
+            )}
           </div>
           <div className="nav-links nav-links--mobile">
             <a
