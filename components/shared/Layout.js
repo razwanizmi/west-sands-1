@@ -19,6 +19,12 @@ const Layout = ({ children }) => (
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <link
+        rel="shortcut icon"
+        href="/static/images/favicon.ico"
+        type="image/x-icon"
+      />
+      <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon" />
       <link rel="stylesheet" href="/static/css/bootstrap.min.css" />
       <link rel="stylesheet" href="/static/css/fontawesome.min.css" />
       <link rel="stylesheet" href="/static/css/slick/slick.min.css" />
