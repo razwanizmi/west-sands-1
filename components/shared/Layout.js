@@ -33,17 +33,17 @@ const Layout = ({ children }) => (
       <meta property="og:title" content="West Sands at Ukulhas" />
       <meta
         property="og:image"
-        content="https://razwanizmi.github.io/static/images/meta.jpg"
+        content="http://www.westsandsukulhas.com/static/images/meta.jpg"
       />
       <meta
         property="og:description"
         content="We discovered paradise on the island of Ukulhas! Fortunately, it happened to be our backyard. Welcome to West Sands for a distinctly different local island holiday experience in Maldives. Soak up the sun, beach and the azure blue waters of the Indian Ocean."
       />
-      <meta property="og:url" content="https://razwanizmi.github.io" />
+      <meta property="og:url" content="http://www.westsandsukulhas.com" />
       <meta property="og:site_name" content="West Sands at Ukulhas" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:url" content="https://razwanizmi.github.io" />
+      <meta name="twitter:url" content="http://www.westsandsukulhas.com" />
       <meta name="twitter:title" content="West Sands at Ukulhas" />
       <meta
         name="twitter:description"
@@ -51,9 +51,9 @@ const Layout = ({ children }) => (
       />
       <meta
         name="twitter:image"
-        content="https://razwanizmi.github.io/static/images/meta.jpg"
+        content="http://www.westsandsukulhas.com/static/images/meta.jpg"
       />
-      <meta name="twitter:site" content="https://razwanizmi.github.io" />
+      <meta name="twitter:site" content="http://www.westsandsukulhas.com" />
     </Head>
     {children}
   </div>
